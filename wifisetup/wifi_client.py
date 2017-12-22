@@ -224,7 +224,7 @@ class WifiClient:
                 wpa(self.wiface, 'set_network', nid, 'key_mgmt', 'NONE')
 
             wpa(self.wiface, 'enable', nid)
-            connected = self.get_connected(ssid)
+            connected = True #self.get_connected(ssid)
             if connected:
                 wpa(self.wiface, 'save_config')
 
